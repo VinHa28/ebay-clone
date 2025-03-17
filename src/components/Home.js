@@ -54,8 +54,77 @@ function Home() {
       link: "/category/toys"
     }
   ];
-
+  const products = [
+    {
+        id: 1,
+        name: "Apple iPhone 14 Pro",
+        price: 999,
+        image: "/images/products/product-01.png",
+        brandId: "apple",
+        categoryId: "smartphone",
+        condition: "New",
+        shipping: "Free Shipping",
+        rating: 4.8,
+    },
+    {
+        id: 2,
+        name: "Samsung Galaxy S23 Ultra",
+        price: 1199,
+        image: "/images/products/product-02.png",
+        brandId: "samsung",
+        categoryId: "smartphone",
+        condition: "New",
+        shipping: "Free Shipping",
+        rating: 4.7,
+    },
+    {
+        id: 3,
+        name: "Sony WH-1000XM5 Headphones",
+        price: 399,
+        image: "/images/products/product-03.png",
+        brandId: "sony",
+        categoryId: "electronics",
+        condition: "Refurbished",
+        shipping: "Free Shipping",
+        rating: 4.6,
+    },
+    {
+        id: 4,
+        name: "Nike Air Max 270",
+        price: 129,
+        image: "/images/products/product-04.png",
+        brandId: "nike",
+        categoryId: "fashion",
+        condition: "New with tags",
+        shipping: "Free Shipping",
+        rating: 4.9,
+    },
+    {
+        id: 5,
+        name: "Dell XPS 13 Laptop",
+        price: 1299,
+        image: "/images/products/product-05.png",
+        brandId: "dell",
+        categoryId: "laptop",
+        condition: "Brand New",
+        shipping: "Free Shipping",
+        rating: 4.8,
+    },
+    {
+      id: 6,
+      name: "Keo Kera",
+      price: 36,
+      image: "/images/kera.jpg",
+      brandId: "dell",
+      categoryId: "laptop",
+      condition: "Brand New",
+      shipping: "Free Shipping",
+      rating: 4.8,
+  },
+];
+  
   return (
+  
     <div className="home">
       {/* Hero Banner Section */}
       <div className="hero-banner">
@@ -103,6 +172,33 @@ function Home() {
         <div className="shopping-content">
           <h2>Shopping made easy</h2>
           <button className="start-now-btn">Start now</button>
+        </div>
+      </div>
+      {/* Product Section */}
+      <div className="product-section">
+        <div className="product-header">
+          <h2>Featured Products</h2>
+          <p className="recommendation-text">Best sellers</p>
+          <button className="see-all-btn">See all</button>
+        </div>
+        
+        <div className="product-grid">
+          {products.map(product => (
+            <div key={product.id} className="product-item">
+              <div className="product-image-container">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="product-image"
+                />
+            
+              </div>
+              <div className="product-details">
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-price">{product.price}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
