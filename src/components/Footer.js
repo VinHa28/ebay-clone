@@ -144,8 +144,8 @@ const Footer = () => {
                             {column.hasCountrySelector && (
                                 <div className="country-selector">
                                     <button className="country-button">
-                                        <span className="flag-icon us-flag"></span>
-                                        United States
+                                        <span className="flag-icon vn-flag"></span>
+                                        VietNam
                                         <span className="dropdown-arrow">
                                             ▼
                                         </span>
