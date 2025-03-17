@@ -1,8 +1,6 @@
 import React from "react";
 import "./Checkout.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
-
 export default function Checkout() {
     return (
         <div className="checkout">
@@ -76,8 +74,8 @@ export default function Checkout() {
                                                         Quantity 1
                                                     </p>
                                                     <a
+                                                        href="#!"
                                                         className="checkout-product__desc"
-                                                        href=""
                                                         style={{
                                                             textDecoration:
                                                                 "underline",
@@ -140,7 +138,7 @@ export default function Checkout() {
                                                     </p>
                                                     <a
                                                         className="checkout-product__desc"
-                                                        href=""
+                                                        href="#!"
                                                         style={{
                                                             textDecoration:
                                                                 "underline",
@@ -264,8 +262,8 @@ export default function Checkout() {
                                 Confirm and pay
                             </Button>
                             <p className="checkout__desc text-center mt-3">
-                                Purchase protected by{" "}
-                                <a href="#" className="fw-bold">
+                                Purchase protected by
+                                <a href="#!" className="fw-bold">
                                     eBay Money Back Guarantee
                                 </a>
                             </p>

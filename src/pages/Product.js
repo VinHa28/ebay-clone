@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Header from "../components/Header";
 import ProductCategoryList from "../components/ProductCategoryList";
 import './Product.css';
 import ProductList from "../components/ProductList";

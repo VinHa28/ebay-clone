@@ -1,17 +1,14 @@
 import './App.css';
 import Header from './components/Header';
-import Home from './components/Home';
 import Footer from './components/Footer'
-import Detail from './pages/Detail';
-import Checkout from './pages/Checkout';
-
+import Home from './components/Home';
 function App() {
   return (
     <div className="App">
       {/*Header*/}
       <Header></Header>
       {/*Home*/}
-      <Checkout></Checkout>
+      <Home></Home>
       {/*Footer*/}
       <Footer></Footer>
     </div>

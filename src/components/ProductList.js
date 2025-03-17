@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ProductList.css";
-import InputGroupText from "react-bootstrap/esm/InputGroupText";
+
 const products = [
     {
         id: 1,
@@ -80,6 +80,7 @@ export default function ProductList() {
         indexOfFirstItem,
         indexOfLastItem
     );
+    console.log(currentItems);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -121,7 +122,7 @@ export default function ProductList() {
             <div className="product-list__items">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product-item">
-                        <a href="#" className="product-item__image-link">
+                        <a href="#!" className="product-item__image-link">
                             <img
                                 src={product.image}
                                 alt={product.name}
@@ -130,7 +131,7 @@ export default function ProductList() {
                         </a>
                         <div className="product-item__info">
                             <h5 className="product-item__name">
-                                <a href="#">{product.name}</a>
+                                <a href="#!">{product.name}</a>
                             </h5>
                             <p className="product-item__brand">
                                 Brand:{" "}
