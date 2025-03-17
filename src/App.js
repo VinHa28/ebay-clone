@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer'
 import Detail from './pages/Detail';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       {/*Header*/}
       <Header></Header>
       {/*Home*/}
-      <Detail></Detail>
+      <Checkout></Checkout>
       {/*Footer*/}
       <Footer></Footer>
     </div>
