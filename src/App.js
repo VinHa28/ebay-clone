@@ -1,9 +1,13 @@
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Clone Ebay With ReactJS</h1>
+      {/*Header*/}
+      <Header></Header>
+      {/*Home*/}
+      {/*Home*/}
     </div>
   );
 }
