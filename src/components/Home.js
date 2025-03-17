@@ -99,19 +99,9 @@ function Home() {
         shipping: "Free Shipping",
         rating: 4.9,
     },
+    
     {
-        id: 5,
-        name: "Dell XPS 13 Laptop",
-        price: 1299,
-        image: "/images/products/product-05.png",
-        brandId: "dell",
-        categoryId: "laptop",
-        condition: "Brand New",
-        shipping: "Free Shipping",
-        rating: 4.8,
-    },
-    {
-      id: 6,
+      id: 5,
       name: "Keo Kera",
       price: 36,
       image: "/images/kera.jpg",
