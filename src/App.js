@@ -1,7 +1,7 @@
 import './App.css';
-import Detail from './components/Detail';
 import Header from './components/Header';
-import Product from './pages/Product';
+import Home from './components/Home';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
       {/*Header*/}
       <Header></Header>
       {/*Home*/}
-      <Detail></Detail>
+      <Home></Home>
       {/*Footer*/}
+      <Footer></Footer>
     </div>
   );
 }

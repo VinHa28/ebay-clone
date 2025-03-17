@@ -1,0 +1,183 @@
+/* General Styles */
+.home {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    color: #333;
+  }
+  
+  /* Hero Banner Section */
+  .hero-banner {
+    position: relative;
+    height: 400px;
+    background-image: url('../../public/images/tiendop.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more-btn {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+  }
+  
+  .slider-dots {
+    display: flex;
+    gap: 8px;
+    margin: 0 15px;
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  
+  .slider-prev, .slider-next, .slider-play {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  /* Categories Section */
+  .categories-section {
+    padding: 0 5%;
+    margin-bottom: 40px;
+  }
+  
+  .categories-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .category-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+  
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease;
+  }
+  
+  .category-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .category-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .category-item:hover .category-image {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-item p {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Shopping Made Easy Section */
+  .shopping-easy-section {
+    background-color: #f5f5f5;
+    padding: 40px 5%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .shopping-content h2 {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  
+  .start-now-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 32px;
+    }
+    
+    .category-grid {
+      gap: 10px;
+    }
+    
+    .category-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
