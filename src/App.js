@@ -1,4 +1,5 @@
 import './App.css';
+import Detail from './components/Detail';
 import Header from './components/Header';
 import Product from './pages/Product';
 
@@ -8,8 +9,8 @@ function App() {
       {/*Header*/}
       <Header></Header>
       {/*Home*/}
-      <Product></Product>
-      {/*Home*/}
+      <Detail></Detail>
+      {/*Footer*/}
     </div>
   );
 }
