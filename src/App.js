@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import Product from './pages/Product';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       {/*Header*/}
       <Header></Header>
       {/*Home*/}
+      <Product></Product>
       {/*Home*/}
     </div>
   );

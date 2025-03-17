@@ -1,0 +1,18 @@
+.category-list {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.category-list__link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 4px 0;
+    line-height: 1.24;
+}
+.category-list__link:hover {
+    text-decoration: underline;
+}
+.product-item__image {
+    
+}
