@@ -1,0 +1,82 @@
+{
+    "User": [
+      { "userId": 1, "userName": "john_doe", "password": "123456", "fullName": "John Doe", "address": "123 Elm Street", "email": "john.doe@email.com", "phone": "555-123-4567" },
+      { "userId": 2, "userName": "jane_smith", "password": "password", "fullName": "Jane Smith", "address": "456 Oak Avenue", "email": "jane.smith@email.com", "phone": "555-234-5678" },
+      { "userId": 3, "userName": "mike_jones", "password": "mike123", "fullName": "Mike Jones", "address": "789 Pine Road", "email": "mike.jones@email.com", "phone": "555-345-6789" },
+      { "userId": 4, "userName": "lisa_wong", "password": "secure789", "fullName": "Lisa Wong", "address": "101 Maple Drive", "email": "lisa.wong@email.com", "phone": "555-456-7890" },
+      { "userId": 5, "userName": "robert_chen", "password": "chen2025", "fullName": "Robert Chen", "address": "202 Cedar Lane", "email": "robert.chen@email.com", "phone": "555-567-8901" }
+    ],
+    "Category": [
+      { "categoryId": 1, "name": "Electronics", "image": "/images/categories/electronics.png", "description": "Latest tech gadgets and electronic devices" },
+      { "categoryId": 2, "name": "Fashion", "image": "/images/categories/fashion.png", "description": "Trendy clothing and accessories" },
+      { "categoryId": 3, "name": "Home Appliances", "image": "/images/categories/home_appliances.png", "description": "Essential appliances for modern homes" },
+      { "categoryId": 4, "name": "Sports & Outdoors", "image": "/images/categories/sports.png", "description": "Equipment for sports and outdoor activities" },
+      { "categoryId": 5, "name": "Books & Media", "image": "/images/categories/books.png", "description": "Books, movies, and music collections" }
+    ],
+    "Brand": [
+      { "brandId": 1, "name": "Apple", "image": "/images/brands/apple.png", "country": "USA", "founded": 1976 },
+      { "brandId": 2, "name": "Samsung", "image": "/images/brands/samsung.png", "country": "South Korea", "founded": 1938 },
+      { "brandId": 3, "name": "Sony", "image": "/images/brands/sony.png", "country": "Japan", "founded": 1946 },
+      { "brandId": 4, "name": "Nike", "image": "/images/brands/nike.png", "country": "USA", "founded": 1964 },
+      { "brandId": 5, "name": "Adidas", "image": "/images/brands/adidas.png", "country": "Germany", "founded": 1949 },
+      { "brandId": 6, "name": "LG", "image": "/images/brands/lg.png", "country": "South Korea", "founded": 1958 }
+    ],
+    "Product": [
+      { "productId": 1, "categoryId": 1, "brandId": 1, "name": "iPhone 14 Pro", "price": 999, "image": "/images/products/iphone14pro.jpg", "rating": 4.8, "inStock": true, "description": "Latest Apple iPhone with advanced features.", "discount": 0, "warranty": "1 year" },
+      { "productId": 2, "categoryId": 1, "brandId": 2, "name": "Galaxy S23 Ultra", "price": 1199, "image": "/images/products/galaxys23ultra.jpg", "rating": 4.7, "inStock": true, "description": "Samsung's flagship smartphone.", "discount": 50, "warranty": "1 year" },
+      { "productId": 3, "categoryId": 3, "brandId": 3, "name": "Sony Bravia X90J", "price": 1499, "image": "/images/products/sonybravia.jpg", "rating": 4.6, "inStock": true, "description": "4K Ultra HD Smart LED TV with Dolby Vision.", "discount": 100, "warranty": "2 years" },
+      { "productId": 4, "categoryId": 2, "brandId": 1, "name": "Apple Watch Series 8", "price": 499, "image": "/images/products/applewatch8.jpg", "rating": 4.9, "inStock": true, "description": "Advanced fitness tracker and smartwatch from Apple.", "discount": 0, "warranty": "1 year" },
+      { "productId": 5, "categoryId": 1, "brandId": 2, "name": "Samsung Galaxy Buds 2", "price": 149, "image": "/images/products/galaxybuds2.jpg", "rating": 4.5, "inStock": true, "description": "Wireless earbuds with noise cancellation.", "discount": 20, "warranty": "1 year" },
+      { "productId": 6, "categoryId": 4, "brandId": 4, "name": "Nike Air Zoom Pegasus", "price": 129, "image": "/images/products/nikeairzoom.jpg", "rating": 4.4, "inStock": true, "description": "Running shoes with responsive cushioning.", "discount": 0, "warranty": "30 days" },
+      { "productId": 7, "categoryId": 4, "brandId": 5, "name": "Adidas Ultraboost", "price": 180, "image": "/images/products/adidasultraboost.jpg", "rating": 4.6, "inStock": true, "description": "Premium running shoes with energy return technology.", "discount": 15, "warranty": "30 days" },
+      { "productId": 8, "categoryId": 3, "brandId": 6, "name": "LG French Door Refrigerator", "price": 2199, "image": "/images/products/lgrefrigerator.jpg", "rating": 4.8, "inStock": false, "description": "Smart refrigerator with InstaView Door-in-Door.", "discount": 200, "warranty": "5 years" },
+      { "productId": 9, "categoryId": 5, "brandId": 3, "name": "Sony WH-1000XM5", "price": 399, "image": "/images/products/sonywh1000xm5.jpg", "rating": 4.9, "inStock": true, "description": "Premium noise cancelling headphones.", "discount": 50, "warranty": "2 years" },
+      { "productId": 10, "categoryId": 5, "brandId": 1, "name": "iPad Pro", "price": 799, "image": "/images/products/ipadpro.jpg", "rating": 4.7, "inStock": true, "description": "Powerful tablet for professionals and creatives.", "discount": 0, "warranty": "1 year" }
+    ],
+    "Order": [
+      { "orderId": 1, "userId": 1, "orderDate": "2025-03-17", "shipDate": "2025-03-20", "status": "Shipped", "address": "123 Elm Street", "paymentMethod": "Credit Card", "shippingFee": 15 },
+      { "orderId": 2, "userId": 2, "orderDate": "2025-03-18", "shipDate": "2025-03-21", "status": "Processing", "address": "456 Oak Avenue", "paymentMethod": "PayPal", "shippingFee": 10 },
+      { "orderId": 3, "userId": 3, "orderDate": "2025-03-15", "shipDate": "2025-03-18", "status": "Delivered", "address": "789 Pine Road", "paymentMethod": "Credit Card", "shippingFee": 12 },
+      { "orderId": 4, "userId": 4, "orderDate": "2025-03-16", "shipDate": "2025-03-19", "status": "Shipped", "address": "101 Maple Drive", "paymentMethod": "Credit Card", "shippingFee": 15 },
+      { "orderId": 5, "userId": 5, "orderDate": "2025-03-18", "shipDate": "2025-03-22", "status": "Processing", "address": "202 Cedar Lane", "paymentMethod": "Bank Transfer", "shippingFee": 10 },
+      { "orderId": 6, "userId": 1, "orderDate": "2025-03-10", "shipDate": "2025-03-13", "status": "Delivered", "address": "123 Elm Street", "paymentMethod": "Credit Card", "shippingFee": 15 }
+    ],
+    "OrderDetail": [
+      { "orderId": 1, "productId": 1, "unitPrice": 999, "quantity": 1, "subTotal": 999, "discount": 0, "tax": 99.9 },
+      { "orderId": 2, "productId": 2, "unitPrice": 1199, "quantity": 1, "subTotal": 1199, "discount": 50, "tax": 114.9 },
+      { "orderId": 3, "productId": 5, "unitPrice": 149, "quantity": 2, "subTotal": 298, "discount": 40, "tax": 25.8 },
+      { "orderId": 3, "productId": 6, "unitPrice": 129, "quantity": 1, "subTotal": 129, "discount": 0, "tax": 12.9 },
+      { "orderId": 4, "productId": 10, "unitPrice": 799, "quantity": 1, "subTotal": 799, "discount": 0, "tax": 79.9 },
+      { "orderId": 5, "productId": 7, "unitPrice": 180, "quantity": 2, "subTotal": 360, "discount": 30, "tax": 33 },
+      { "orderId": 5, "productId": 9, "unitPrice": 399, "quantity": 1, "subTotal": 399, "discount": 50, "tax": 34.9 },
+      { "orderId": 6, "productId": 8, "unitPrice": 2199, "quantity": 1, "subTotal": 2199, "discount": 200, "tax": 199.9 }
+    ],
+    "Cart": [
+      { "cartId": 1, "userId": 1, "productId": 2, "quantity": 1, "dateAdded": "2025-03-18T08:30:00" },
+      { "cartId": 2, "userId": 2, "productId": 1, "quantity": 2, "dateAdded": "2025-03-17T14:45:00" },
+      { "cartId": 3, "userId": 3, "productId": 3, "quantity": 1, "dateAdded": "2025-03-18T10:15:00" },
+      { "cartId": 4, "userId": 1, "productId": 4, "quantity": 5, "dateAdded": "2025-03-16T16:20:00" },
+      { "cartId": 5, "userId": 4, "productId": 6, "quantity": 2, "dateAdded": "2025-03-18T09:10:00" },
+      { "cartId": 6, "userId": 5, "productId": 8, "quantity": 1, "dateAdded": "2025-03-17T11:30:00" },
+      { "cartId": 7, "userId": 3, "productId": 9, "quantity": 1, "dateAdded": "2025-03-18T13:45:00" }
+    ],
+    "Review": [
+      { "reviewId": 1, "userId": 1, "productId": 1, "rating": 5, "comment": "Best phone I've ever owned!", "date": "2025-03-10" },
+      { "reviewId": 2, "userId": 2, "productId": 2, "rating": 4, "comment": "Great phone but battery life could be better.", "date": "2025-03-12" },
+      { "reviewId": 3, "userId": 3, "productId": 5, "rating": 5, "comment": "Amazing sound quality and comfortable fit.", "date": "2025-03-14" },
+      { "reviewId": 4, "userId": 4, "productId": 7, "rating": 4, "comment": "Comfortable shoes, great for long runs.", "date": "2025-03-15" },
+      { "reviewId": 5, "userId": 5, "productId": 9, "rating": 5, "comment": "Incredible noise cancellation. Worth every penny.", "date": "2025-03-16" }
+    ],
+    "Wishlist": [
+      { "wishlistId": 1, "userId": 1, "productId": 3, "dateAdded": "2025-03-05" },
+      { "wishlistId": 2, "userId": 1, "productId": 7, "dateAdded": "2025-03-08" },
+      { "wishlistId": 3, "userId": 2, "productId": 10, "dateAdded": "2025-03-10" },
+      { "wishlistId": 4, "userId": 3, "productId": 8, "dateAdded": "2025-03-12" },
+      { "wishlistId": 5, "userId": 4, "productId": 9, "dateAdded": "2025-03-15" }
+    ],
+    "Coupon": [
+      { "couponId": 1, "code": "WELCOME25", "discount": 25, "validFrom": "2025-01-01", "validTo": "2025-12-31", "minPurchase": 100 },
+      { "couponId": 2, "code": "SUMMER50", "discount": 50, "validFrom": "2025-06-01", "validTo": "2025-08-31", "minPurchase": 250 },
+      { "couponId": 3, "code": "FLASH10", "discount": 10, "validFrom": "2025-03-15", "validTo": "2025-03-20", "minPurchase": 50 }
+    ]
+  }
