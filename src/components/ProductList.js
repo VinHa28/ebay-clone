@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./ProductList.css";
 import axios from "axios";
 import BaseURL from "../others/BaseURL";
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 
 const EXCHANGE_RATE = 25525;
 export default function ProductList() {
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const brandFromURL = queryParams.get('brand') || "";
+
     const [products, setProducts] = useState([]);
     const [brands, setBrands] = useState([]);
     const [searchedBrands, setSearchedBrands] = useState("");
@@ -27,6 +31,9 @@ export default function ProductList() {
         return fitSearchName && fitBrand;
     });
 
+    useEffect(() => {
+        setSearchedBrands(brandFromURL);
+    }, [brandFromURL]);
     
 
     return (
