@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Product from "./pages/Product";
 import Detail from "./pages/Detail";
 import Login from "./pages/Login";
+import Cart from "./pages/Cart";
 
 function Layout() {
     const location = useLocation();
@@ -21,6 +22,7 @@ function Layout() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
         </div>

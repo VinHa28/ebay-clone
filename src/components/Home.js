@@ -11,15 +11,15 @@ function Home() {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/Category") 
+        axios.get("http://localhost:3000/categories") 
             .then(response => setCategories(response.data))
             .catch(error => console.error("Error fetching categories:", error));
 
-        axios.get("http://localhost:3000/Product") 
+        axios.get("http://localhost:3000/products") 
             .then(response => setProducts(response.data))
             .catch(error => console.error("Error fetching products:", error));
 
-        axios.get("http://localhost:3000/Brand")
+        axios.get("http://localhost:3000/brands")
         .then(response => setBrands(response.data))
         .catch(error => console.error("Error fetching brands:", error))
     }, []);
@@ -87,8 +87,8 @@ function Home() {
                     {brands.map((brand) => (
                         
                         <Link
-                        key={brand.brandId}
-                        to={`/product?brand=${brand.brandId}`}
+                        key={brand.id}
+                        to={`/product?brand=${brand.id}`}
                         className="category-item"
                         aria-label={`Browse ${brand.name} products`}
                     >
@@ -112,9 +112,9 @@ function Home() {
                 </div>
                 <div className="product-grid">
                     {products.slice(0, 5).map((product) => (
-                        <div key={product.productId} className="product-item-home">
+                        <div key={product.id} className="product-item-home">
                             <div className="product-image-container">
-                                <Link to={`/detail/${product.productId}`}>
+                                <Link to={`/detail/${product.id}`}>
                                     <img
                                         src={product.image}
                                         alt={product.name}

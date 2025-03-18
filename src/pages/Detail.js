@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Detail.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import BaseURL from "../others/BaseURL";
+import { UserContext } from "../context/UserContext";
 const EXCHANGE_RATE = 25525;
 
 export default function Detail() {
@@ -11,6 +12,29 @@ export default function Detail() {
     const [productDetail, setProductDetail] = useState(null);
     const [brand, setBrand] = useState(null);
     const [category, setCategory] = useState(null);
+    const { user, addToCart } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    const handleAddToCart = () => {
+      
+
+        const cartItem = {
+            id: Date.now(), 
+            userId: user.id,
+            productId: parseInt(productId),
+            quantity: 1,
+            dateAdded: new Date().toISOString(),
+            product: productDetail 
+        };
+
+        addToCart(cartItem);
+        
+        alert("Product added to cart!");
+    };
+    const handleBuyNow = () => {
+        handleAddToCart();
+        navigate("/cart"); 
+    };
     useEffect(() => {
         if (productId) {
             axios.get(`${BaseURL}products/${productId}`)
@@ -108,15 +132,16 @@ export default function Detail() {
                             </p>
                         </div>
                         <div className="detail-content__actions">
-                            <Button className="rounded-pill w-100">
-                                Buy It Now
-                            </Button>
-                            <Button
-                                variant="outline-primary"
-                                className="rounded-pill w-100"
-                            >
-                                Add To Card
-                            </Button>
+                        <Button className="rounded-pill w-100" onClick={handleBuyNow}>
+                    Buy It Now
+                </Button>
+                <Button
+                    variant="outline-primary"
+                    className="rounded-pill w-100"
+                    onClick={handleAddToCart}
+                >
+                    Add To Card
+                </Button>
                         </div>
 
                         <div className="detail-content__deli row gy-3">
