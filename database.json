@@ -33,7 +33,7 @@
       { "productId": 8, "categoryId": 3, "brandId": 6, "name": "LG French Door Refrigerator", "price": 2199, "image": "/images/products/product-08.png", "rating": 4.8, "inStock": false, "description": "Smart refrigerator with InstaView Door-in-Door.", "discount": 200, "warranty": "5 years" },
       { "productId": 9, "categoryId": 5, "brandId": 3, "name": "Sony WH-1000XM5", "price": 399, "image": "/images/products/product-09.png", "rating": 4.9, "inStock": true, "description": "Premium noise cancelling headphones.", "discount": 50, "warranty": "2 years" },
       { "productId": 10, "categoryId": 5, "brandId": 1, "name": "iPad Pro", "price": 799, "image": "/images/products/product-10.png", "rating": 4.7, "inStock": true, "description": "Powerful tablet for professionals and creatives.", "discount": 0, "warranty": "1 year" },
-      { "productId": 11, "categoryId": 5, "brandId": 1, "name": "Kẹo Kerra", "price": 36, "image": "/images/products/product-11.png", "rating": 3.6, "inStock": true, "description": "One pill is equal to one plate of vegetables.", "discount": 0, "warranty": "1 year" }
+      { "productId": 11, "categoryId": 5, "brandId":7, "name": "Kẹo Kerra", "price": 36, "image": "/images/products/product-11.png", "rating": 3.6, "inStock": true, "description": "One pill is equal to one plate of vegetables.", "discount": 0, "warranty": "1 year" }
     ],
     "Order": [
       { "orderId": 1, "userId": 1, "orderDate": "2025-03-17", "shipDate": "2025-03-20", "status": "Shipped", "address": "123 Elm Street", "paymentMethod": "Credit Card", "shippingFee": 15 },

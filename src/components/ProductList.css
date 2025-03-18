@@ -16,7 +16,7 @@
     width: 230px;
     height: 230px;
     object-fit: contain;
-    transition: 0.2s;
+    transition: 0.3s;
     scale: 0.8;
 
 }
@@ -24,6 +24,8 @@
     scale: 1;
 }
 .product-item__image-link {
+    display: block;
+    padding: 12px;
     overflow: hidden;
 }
 

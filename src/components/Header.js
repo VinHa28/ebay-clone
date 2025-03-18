@@ -3,6 +3,7 @@ import "./Header.css";
 import { Button, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faBell } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const Header = () => {
     return (
         <div className="header">
@@ -10,7 +11,8 @@ const Header = () => {
                 <nav className="header-top d-flex justify-content-between align-items-center py-2">
                     <ul className="header-top__list">
                         <li className="header-top__item">
-                            Hi! <a href="#">Sign in</a> or <a href="#">register</a>
+                            Hi! <Link to="/login" style={{textDecoration:"underline"}}>Sign in</Link> or{" "}
+                            <Link to="/login" style={{textDecoration:"underline"}}>register</Link>
                         </li>
                         <li className="header-top__item">
                             <a className="header-top__link" href="#">
@@ -60,33 +62,54 @@ const Header = () => {
                             <a
                                 href="#"
                                 className="header-top__notice header-top__btn"
-                            > <FontAwesomeIcon icon={faBell} style={{color: "var(--text-color)"}}/> </a>
+                            >
+                                {" "}
+                                <FontAwesomeIcon
+                                    icon={faBell}
+                                    style={{ color: "var(--text-color)" }}
+                                />{" "}
+                            </a>
                             <a
                                 href="#"
                                 className="header-top__cart header-top__btn"
-                            ><FontAwesomeIcon icon={faCartShopping} style={{color: "var(--text-color)"}}/></a>
+                            >
+                                <FontAwesomeIcon
+                                    icon={faCartShopping}
+                                    style={{ color: "var(--text-color)" }}
+                                />
+                            </a>
                         </div>
                     </div>
                 </nav>
                 <div className="header-main d-flex gap-2 align-items-center">
                     <div className="logo">
-                        <a href="#">
-                            <img className="logo__img" src="/images/EBay_logo.svg.png"/>
-                        </a>
+                        <Link to="/">
+                            <a href="#!">
+                                <img
+                                    className="logo__img"
+                                    src="/images/EBay_logo.svg.png"
+                                    alt=""
+                                />
+                            </a>
+                        </Link>
                     </div>
-                    <a href="#" className="header-main__link" >Shop by category</a>
+                    <a href="#" className="header-main__link">
+                        Shop by category
+                    </a>
                     <div className="header-main__search d-flex align-items-center gap-2 w-100 h-100">
                         <input
                             className="header-main__input h-100 rounded-pill"
                             type="text"
                             placeholder="Search for items"
                         />
-                        <Button className="header-main__btn rounded-pill font-weight-bold h-100">Search</Button>
+                        <Button className="header-main__btn rounded-pill font-weight-bold h-100">
+                            Search
+                        </Button>
                     </div>
 
-                    
-                    <a href="#" className="header-main__link">Advance</a>
-
+                    <a href="#" className="header-main__link">
+                        Advance
+                    </a>
                 </div>
             </Container>
         </div>
