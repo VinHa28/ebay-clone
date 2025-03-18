@@ -20,52 +20,52 @@ const Header = () => {
                             <Link to="/login" style={{ textDecoration: "underline" }}> register. </Link>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#!">
+                            <Link className="header-top__link" to="/">
                                 Daily deals
-                            </a>
+                            </Link>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#!">
+                            <Link className="header-top__link" to="/">
                                 Brand outlet
-                            </a>
+                            </Link>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#!">
+                            <Link className="header-top__link" to="/">
                                 Gift card
-                            </a>
+                            </Link>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#!">
+                            <Link className="header-top__link" to="/">
                                 Help & Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div className="header-top__right d-flex align-items-center gap-3">
                         <ul className="header-top__list">
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#!">
+                                <Link className="header-top__link" to="/">
                                     Ship to
-                                </a>
+                                </Link>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#!">
+                                <Link className="header-top__link" to="/">
                                     Sell
-                                </a>
+                                </Link>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#!">
+                                <Link className="header-top__link" to="/">
                                     Watchlist
-                                </a>
+                                </Link>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#!">
+                                <Link className="header-top__link" to="/">
                                     My eBay
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className="header-top__actions d-flex gap-3">
-                            <a
-                                href="#!"
+                            <Link
+                                to="/"
                                 className="header-top__notice header-top__btn"
                             >
                                 {" "}
@@ -73,16 +73,16 @@ const Header = () => {
                                     icon={faBell}
                                     style={{ color: "var(--text-color)" }}
                                 />{" "}
-                            </a>
-                            <a
-                                href="#!"
+                            </Link>
+                            <Link
+                                to="/cart"
                                 className="header-top__cart header-top__btn"
                             >
                                 <FontAwesomeIcon
                                     icon={faCartShopping}
                                     style={{ color: "var(--text-color)" }}
                                 />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </nav>
@@ -96,9 +96,9 @@ const Header = () => {
                             />
                         </Link>
                     </div>
-                    <a href="#!" className="header-main__link">
+                    <Link to="/" className="header-main__link">
                         Shop by category
-                    </a>
+                    </Link>
                     <div className="header-main__search d-flex align-items-center gap-2 w-100 h-100">
                         <input
                             className="header-main__input h-100 rounded-pill"
@@ -110,9 +110,9 @@ const Header = () => {
                         </Button>
                     </div>
 
-                    <a href="#!" className="header-main__link">
+                    <Link to="/" className="header-main__link">
                         Advance
-                    </a>
+                    </Link>
                 </div>
             </Container>
         </div>

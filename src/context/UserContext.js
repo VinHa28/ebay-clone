@@ -10,7 +10,7 @@ export const UserProvider = ({ children }) => {
     const [userList, setUserList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${BaseURL}User`).then((response) => setUserList(response.data)).catch((error) => console.log("Failed to fetch users: ", error));
+        axios.get(`${BaseURL}users`).then((response) => setUserList(response.data)).catch((error) => console.log("Failed to fetch users: ", error));
     }, []);
 
     const login = (user) => setUser(user);

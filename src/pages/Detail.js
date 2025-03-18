@@ -13,10 +13,9 @@ export default function Detail() {
     const [category, setCategory] = useState(null);
     useEffect(() => {
         if (productId) {
-            axios
-                .get(`${BaseURL}Product?productId=${productId}`)
+            axios.get(`${BaseURL}products/${productId}`)
                 .then((response) => {
-                    const product = response.data[0];
+                    const product = response.data;
                     if (product) setProductDetail(product);
                     else console.log("Product not found!");
                 })
@@ -26,18 +25,16 @@ export default function Detail() {
         }
     }, [productId]);
 
-    console.log(productDetail);
-
     useEffect(() => {
         if (productDetail) {
             const fetchBrandAndCategory = async () => {
                 try {
                     const [brandRes, categoryRes] = await Promise.all([
                         axios.get(
-                            `${BaseURL}Brand?brandId=${productDetail.brandId}`
+                            `${BaseURL}brands/${productDetail.brandId}`
                         ),
                         axios.get(
-                            `${BaseURL}Category?categoryId=${productDetail.categoryId}`
+                            `${BaseURL}categories/{productDetail.categoryId}`
                         ),
                     ]);
 

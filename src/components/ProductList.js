@@ -18,11 +18,11 @@ export default function ProductList() {
 
     useEffect(() => {
         axios
-            .get(`${BaseURL}Product`)
+            .get(`${BaseURL}products`)
             .then((response) => setProducts(response.data))
             .catch((error) => console.log("Failed to fetch products: ", error));
 
-        axios.get(`${BaseURL}Brand`).then((response) => setBrands(response.data)).catch((error) => console.log("Failed to fetch brands: ", error));
+        axios.get(`${BaseURL}brands`).then((response) => setBrands(response.data)).catch((error) => console.log("Failed to fetch brands: ", error));
     }, []);
 
     const filteredProducts = products.filter((product) => {
@@ -51,7 +51,7 @@ export default function ProductList() {
                 <select name="brand" value={searchedBrands} onChange={(e) => setSearchedBrands(e.target.value)}>
                     <option value="">All Brands</option>
                     {brands.map((brand) => (
-                        <option key={brand.brandId} value={brand.brandId}>
+                        <option key={brand.id} value={brand.id}>
                             {brand.name}
                         </option>
                     ))}
@@ -68,8 +68,8 @@ export default function ProductList() {
 
             <div className="product-list__items">
                 {filteredProducts.map((product) => (
-                    <div key={product.productId} className="product-item">
-                        <Link to={`/detail/${product.productId}`} className="product-item__image-link">
+                    <div key={product.id} className="product-item">
+                        <Link to={`/detail/${product.id}`} className="product-item__image-link">
                             <img
                                 src={product.image}
                                 alt={product.name}
@@ -78,10 +78,10 @@ export default function ProductList() {
                         </Link>
                         <div className="product-item__info">
                             <h5 className="product-item__name">
-                                <Link to={`/detail/${product.productId}`}>{product.name}</Link>
+                                <Link to={`/detail/${product.id}`}>{product.name}</Link>
                             </h5>
                             <p className="product-item__brand">
-                                Brand: {brands.find((b) => b.brandId === product.brandId).name}
+                                Brand: {brands.find(brand => brand.id.toString() === product.brandId.toString()).name}
                             </p>
                             <p className="product-item__price">
                                 Price: ${product.price}
