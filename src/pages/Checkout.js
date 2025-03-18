@@ -1,6 +1,7 @@
 import React from "react";
 import "./Checkout.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export default function Checkout() {
     return (
         <div className="checkout">
@@ -73,16 +74,9 @@ export default function Checkout() {
                                                     <p className="checkout-product__desc checkout-product__desc--blur">
                                                         Quantity 1
                                                     </p>
-                                                    <a
-                                                        href="#!"
-                                                        className="checkout-product__desc"
-                                                        style={{
-                                                            textDecoration:
-                                                                "underline",
-                                                        }}
-                                                    >
+                                                    <Link to="/" className="checkout-product__desc" style={{ textDecoration: "underline", }}>
                                                         Remove
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <p className="mb-3 checkout-product__desc checkout-product__desc--blur">
                                                     Returns accepted
@@ -136,16 +130,9 @@ export default function Checkout() {
                                                     <p className="checkout-product__desc checkout-product__desc--blur">
                                                         Quantity 1
                                                     </p>
-                                                    <a
-                                                        className="checkout-product__desc"
-                                                        href="#!"
-                                                        style={{
-                                                            textDecoration:
-                                                                "underline",
-                                                        }}
-                                                    >
+                                                    <Link className="checkout-product__desc" href="#!" style={{ textDecoration: "underline"}}>
                                                         Remove
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                                 <p className="mb-3 checkout-product__desc checkout-product__desc--blur">
                                                     Returns accepted
@@ -262,8 +249,8 @@ export default function Checkout() {
                                 Confirm and pay
                             </Button>
                             <p className="checkout__desc text-center mt-3">
-                                Purchase protected by
-                                <a href="#!" className="fw-bold">
+                                Purchase protected by {" "}
+                                <a href="https://pages.ebay.com/ebay-money-back-guarantee/" className="fw-bold">
                                     eBay Money Back Guarantee
                                 </a>
                             </p>
