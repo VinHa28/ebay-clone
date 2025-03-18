@@ -5,7 +5,7 @@ import BaseURL from "../others/BaseURL";
 import { Link } from "react-router-dom";
 
 const EXCHANGE_RATE = 25525;
-export default function ProductList() {
+export default function ProductList({ selectedCategory }) {
     const [products, setProducts] = useState([]);
     const [brands, setBrands] = useState([]);
     const [searchedBrands, setSearchedBrands] = useState("");
@@ -23,12 +23,20 @@ export default function ProductList() {
 
     const filteredProducts = products.filter((product) => {
         const fitSearchName = product.name.toLowerCase().includes(searchedName.toLowerCase());
-        const fitBrand = product.brandId.toString() === searchedBrands.toString() || searchedBrands.toString() === ""
-        return fitSearchName && fitBrand;
+        const fitBrand = product.brandId.toString() === searchedBrands.toString() || searchedBrands.toString() === "";
+        const fitCategory = selectedCategory ? product.categoryId.toString() === selectedCategory.toString() : true;
+        return fitSearchName && fitBrand && fitCategory;
     });
 
-    console.log(brands);
-    
+    // Sort products based on sort type
+    const sortedProducts = [...filteredProducts].sort((a, b) => {
+        if (sortType === "price") {
+            return a.price - b.price;
+        } else if (sortType === "rating") {
+            return b.rating - a.rating;
+        }
+        return 0;
+    });
 
     return (
         <div className="product-list">
@@ -61,7 +69,7 @@ export default function ProductList() {
             </div>
 
             <div className="product-list__items">
-                {filteredProducts.map((product) => (
+                {sortedProducts.map((product) => (
                     <div key={product.id} className="product-item">
                         <Link to={`/detail/${product.id}`} className="product-item__image-link">
                             <img
@@ -75,7 +83,7 @@ export default function ProductList() {
                                 <Link to={`/detail/${product.id}`}>{product.name}</Link>
                             </h5>
                             <p className="product-item__brand">
-                                Brand: {brands.find(brand => brand.id.toString() === product.brandId.toString()).name}
+                                Brand: {brands.find(brand => brand.id.toString() === product.brandId.toString())?.name || 'Unknown'}
                             </p>
                             <p className="product-item__price">
                                 Price: ${product.price}

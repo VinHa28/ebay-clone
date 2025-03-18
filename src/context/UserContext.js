@@ -18,7 +18,6 @@ export const UserProvider = ({ children }) => {
 
     const addToCart = (item) => setCart([...cart, item]);
     const clearCart = () => setCart([]);
-    console.log(userList)
     return (
         <UserContext.Provider value={{ user, login, logout, cart, addToCart, clearCart, userList, setUserList }}>
             {children}

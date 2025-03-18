@@ -1,0 +1,84 @@
+
+  .main-content {
+    min-height: calc(100vh - 60px);
+  }
+  
+  /* Registration image - the left side of the page */
+  .registration-image {
+    background-image: url('https://images.unsplash.com/photo-1531315630201-bb15abeb1653?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* You'll need to replace this with your image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+  }
+  
+  /* Form container - the right side styling */
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-wrapper {
+    max-width: 480px;
+    width: 100%;
+  }
+  
+  /* Divider with text in the middle */
+  .divider {
+    position: relative;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e5e5e5;
+    z-index: -1;
+  }
+  
+  .divider-text {
+    background-color: #fff;
+    padding: 0 15px;
+    color: #767676;
+  }
+  
+  /* Social login buttons */
+  .social-login .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  /* Password toggle button styling */
+  .password-toggle {
+    border-left: none;
+  }
+  
+  /* Make form elements look more like the eBay design */
+  .form-control {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 100, 210, 0.25);
+    border-color: #0064d2;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 767px) {
+    .form-wrapper {
+      max-width: 100%;
+    }
+  }
