@@ -153,8 +153,12 @@
   .shopping-content h2 {
     font-size: 28px;
     margin-bottom: 0;
+
   }
   
+  .shopping-content {
+    display: flex;
+  }
   .start-now-btn {
     background-color: #333;
     color: white;

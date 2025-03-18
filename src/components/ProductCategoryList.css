@@ -10,6 +10,10 @@
     padding: 4px 0;
     line-height: 1.24;
 }
+
+.category-list__link.active {
+    text-decoration: underline;
+}
 .category-list__link:hover {
     text-decoration: underline;
 }
