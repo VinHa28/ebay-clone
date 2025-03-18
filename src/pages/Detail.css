@@ -10,6 +10,7 @@
     justify-content: center;
     border-radius: 16px;
     background-color: #f2f2f2;
+    padding: 20px 0;
 }
 
 .detail-media__img {
@@ -35,14 +36,19 @@
     font-size: 24px;
     font-weight: 700;
 }
+
 .detail-content__info {
     margin-top: 12px;
     padding-bottom: 32px;
     border-bottom: 1px solid var(--text-color);
 }
+
 .detail-content__desc {
     font-size: 14px;
     line-height: 1.5;
+}
+
+.detail-content__desc--blur {
     color: #707070;
 }
 
@@ -56,4 +62,12 @@
 
 .detail-content__deli {
     margin-top: 20px;
+}
+
+.detail-content__brand-logo {
+    width: 50px;
+}
+
+.detail-content__brand {
+    margin-top: 10px;
 }

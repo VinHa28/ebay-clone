@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./ProductList.css";
 import axios from "axios";
 import BaseURL from "../others/BaseURL";
+import { Link } from "react-router-dom";
 
+const EXCHANGE_RATE = 25525;
 export default function ProductList() {
     const [products, setProducts] = useState([]);
-    const [search, setSearch] = useState("");
-    const [brand, setBrand] = useState([]);
+    const [brands, setBrands] = useState([]);
+    const [searchedBrands, setSearchedBrands] = useState("");
     const [sortType, setSortType] = useState("price");
+    const [searchedName, setSearchedName] = useState("");
 
     useEffect(() => {
         axios
@@ -15,8 +18,16 @@ export default function ProductList() {
             .then((response) => setProducts(response.data))
             .catch((error) => console.log("Failed to fetch products: ", error));
 
-        axios.get(`${BaseURL}Brand`).then((response) => setBrand(response.data)).catch((error) => console.log("Failed to fetch brands: ", error));
+        axios.get(`${BaseURL}Brand`).then((response) => setBrands(response.data)).catch((error) => console.log("Failed to fetch brands: ", error));
     }, []);
+
+    const filteredProducts = products.filter((product) => {
+        const fitSearchName = product.name.toLowerCase().includes(searchedName.toLowerCase());
+        const fitBrand = product.brandId.toString() === searchedBrands.toString() || searchedBrands.toString() === ""
+        return fitSearchName && fitBrand;
+    });
+
+    
 
     return (
         <div className="product-list">
@@ -26,15 +37,17 @@ export default function ProductList() {
                 <input
                     type="text"
                     placeholder="Search by name"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    value={searchedName}
+                    onChange={(e) => setSearchedName(e.target.value)}
                 />
 
-                <select
-                    value={brand}
-                    onChange={(e) => setBrand(e.target.value)}
-                >
+                <select name="brand" value={searchedBrands} onChange={(e) => setSearchedBrands(e.target.value)}>
                     <option value="">All Brands</option>
+                    {brands.map((brand) => (
+                        <option key={brand.brandId} value={brand.brandId}>
+                            {brand.name}
+                        </option>
+                    ))}
                 </select>
 
                 <select
@@ -47,27 +60,30 @@ export default function ProductList() {
             </div>
 
             <div className="product-list__items">
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                     <div key={product.productId} className="product-item">
-                        <a href="#!" className="product-item__image-link">
+                        <Link to={`/detail/${product.productId}`} className="product-item__image-link">
                             <img
                                 src={product.image}
                                 alt={product.name}
                                 className="product-item__image"
                             />
-                        </a>
+                        </Link>
                         <div className="product-item__info">
                             <h5 className="product-item__name">
-                                <a href="#!">{product.name}</a>
+                                <Link to={`/detail/${product.productId}`}>{product.name}</Link>
                             </h5>
                             <p className="product-item__brand">
-                                Brand: {brand.find((b) => b.brandId === product.brandId).name}
+                                Brand: {brands.find((b) => b.brandId === product.brandId).name}
                             </p>
                             <p className="product-item__price">
                                 Price: ${product.price}
                             </p>
                             <p className="product-item__desc">
-                                Rating: ⭐ {product.rating}
+                                +{(product.price * EXCHANGE_RATE).toLocaleString("vi-VN")} VND 
+                            </p>
+                            <p className="product-item__desc">
+                                Rating: {product.rating} ⭐ 
                             </p>
                         </div>
                     </div>
