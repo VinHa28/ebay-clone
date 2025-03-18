@@ -64,31 +64,26 @@ export default function Detail() {
     const handleAddToCart = () => {
         if (!user) {
             alert("Please login to add items to cart");
-            // You might want to redirect to login page
             return;
         }
 
-        // Create cart item
         const cartItem = {
-            id: Date.now(), // temporary ID until saved to database
+            id: Date.now(), 
             userId: user.id,
             productId: parseInt(productId),
             quantity: 1,
             dateAdded: new Date().toISOString(),
-            product: productDetail // Include product details for easier access in cart
+            product: productDetail 
         };
 
-        // Add to context
         addToCart(cartItem);
         
-        // Optionally show a success message
         alert("Product added to cart!");
     };
 
     const handleBuyNow = () => {
-        // First add to cart, then redirect to cart page
         handleAddToCart();
-        navigate("/cart"); // Make sure you have this route configured
+        navigate("/cart"); 
     };
 
 

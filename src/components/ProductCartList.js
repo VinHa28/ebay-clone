@@ -8,7 +8,6 @@ function ProductCartList() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Redirect if not logged in
   useEffect(() => {
     if (!user) {
       alert("Please login to view your cart");
@@ -28,7 +27,7 @@ function ProductCartList() {
   };
 
   const calculateShipping = () => {
-    return cart.length > 0 ? 15 : 0; // $15 flat shipping fee if cart has items
+    return cart.length > 0 ? 15 : 0; 
   };
 
   const calculateTotal = () => {
@@ -47,12 +46,11 @@ function ProductCartList() {
 
     setLoading(true);
     try {
-      // Use the user's address and default payment method
       const orderId = await checkout(user.address, "Credit Card");
       
       if (orderId) {
         alert(`Order placed successfully! Order ID: ${orderId}`);
-        navigate(`/order/${orderId}`); // Redirect to order confirmation page
+        navigate(`/order/${orderId}`); 
       } else {
         alert("Failed to place order. Please try again.");
       }
@@ -64,7 +62,6 @@ function ProductCartList() {
     }
   };
 
-  // Format date function stays the same
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('vi-VN', { 
