@@ -1,30 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Button, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faBell } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 const Header = () => {
+    const {user, cart } = useContext(UserContext);
     return (
         <div className="header">
             <Container className="custom-container">
                 <nav className="header-top d-flex justify-content-between align-items-center py-2">
                     <ul className="header-top__list">
-                        <li className="header-top__item">
+                        {user && <li className="header-top__item">Hello, {user.userName}</li>}
+                        <li className={user && "d-none" + " header-top__item"}>
                             Hi!{" "}
-                            <Link
-                                to="/login"
-                                style={{ textDecoration: "underline" }}
-                            >
-                                Sign in
-                            </Link>{" "}
+                            <Link to="/login" style={{ textDecoration: "underline" }}> Sign in </Link>{" "}
                             or{" "}
-                            <Link
-                                to="/login"
-                                style={{ textDecoration: "underline" }}
-                            >
-                                register
-                            </Link>
+                            <Link to="/login" style={{ textDecoration: "underline" }}> register. </Link>
                         </li>
                         <li className="header-top__item">
                             <a className="header-top__link" href="#!">
