@@ -201,7 +201,7 @@ export default function Checkout() {
                                                     </p>
                                                     <a
                                                         className="checkout-product__desc"
-                                                        href=""
+                                                        href="#!"
                                                         style={{
                                                             textDecoration:
                                                                 "underline",

@@ -174,7 +174,7 @@ function Home() {
         
         <div className="product-grid">
           {products.map(product => (
-            <div key={product.id} className="product-item">
+            <div key={product.id} className="product-item-home">
               <div className="product-image-container">
                 <img 
                   src={product.image} 
