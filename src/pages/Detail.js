@@ -151,13 +151,14 @@ export default function Detail() {
                             </p>
                         </div>
                         <div className="detail-content__actions">
-                            <Button className="rounded-pill w-100">
+                        <Button className="rounded-pill w-100" onClick={handleBuyNow}>
                                 Buy It Now
                             </Button>
                             <Button
-                                variant="outline-primary"
-                                className="rounded-pill w-100"
-                            >
+                    variant="outline-primary"
+                    className="rounded-pill w-100"
+                    onClick={handleAddToCart}
+                >
                                 Add To Card
                             </Button>
                         </div>
