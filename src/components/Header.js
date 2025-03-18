@@ -11,26 +11,38 @@ const Header = () => {
                 <nav className="header-top d-flex justify-content-between align-items-center py-2">
                     <ul className="header-top__list">
                         <li className="header-top__item">
-                            Hi! <Link to="/login" style={{textDecoration:"underline"}}>Sign in</Link> or{" "}
-                            <Link to="/login" style={{textDecoration:"underline"}}>register</Link>
+                            Hi!{" "}
+                            <Link
+                                to="/login"
+                                style={{ textDecoration: "underline" }}
+                            >
+                                Sign in
+                            </Link>{" "}
+                            or{" "}
+                            <Link
+                                to="/login"
+                                style={{ textDecoration: "underline" }}
+                            >
+                                register
+                            </Link>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#">
+                            <a className="header-top__link" href="#!">
                                 Daily deals
                             </a>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#">
+                            <a className="header-top__link" href="#!">
                                 Brand outlet
                             </a>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#">
+                            <a className="header-top__link" href="#!">
                                 Gift card
                             </a>
                         </li>
                         <li className="header-top__item">
-                            <a className="header-top__link" href="#">
+                            <a className="header-top__link" href="#!">
                                 Help & Contact
                             </a>
                         </li>
@@ -38,29 +50,29 @@ const Header = () => {
                     <div className="header-top__right d-flex align-items-center gap-3">
                         <ul className="header-top__list">
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#">
+                                <a className="header-top__link" href="#!">
                                     Ship to
                                 </a>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#">
+                                <a className="header-top__link" href="#!">
                                     Sell
                                 </a>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#">
+                                <a className="header-top__link" href="#!">
                                     Watchlist
                                 </a>
                             </li>
                             <li className="header-top__item">
-                                <a className="header-top__link" href="#">
+                                <a className="header-top__link" href="#!">
                                     My eBay
                                 </a>
                             </li>
                         </ul>
                         <div className="header-top__actions d-flex gap-3">
                             <a
-                                href="#"
+                                href="#!"
                                 className="header-top__notice header-top__btn"
                             >
                                 {" "}
@@ -70,7 +82,7 @@ const Header = () => {
                                 />{" "}
                             </a>
                             <a
-                                href="#"
+                                href="#!"
                                 className="header-top__cart header-top__btn"
                             >
                                 <FontAwesomeIcon
@@ -84,16 +96,14 @@ const Header = () => {
                 <div className="header-main d-flex gap-2 align-items-center">
                     <div className="logo">
                         <Link to="/">
-                            <a href="#!">
-                                <img
-                                    className="logo__img"
-                                    src="/images/EBay_logo.svg.png"
-                                    alt=""
-                                />
-                            </a>
+                            <img
+                                className="logo__img"
+                                src="/images/EBay_logo.svg.png"
+                                alt=""
+                            />
                         </Link>
                     </div>
-                    <a href="#" className="header-main__link">
+                    <a href="#!" className="header-main__link">
                         Shop by category
                     </a>
                     <div className="header-main__search d-flex align-items-center gap-2 w-100 h-100">
@@ -107,7 +117,7 @@ const Header = () => {
                         </Button>
                     </div>
 
-                    <a href="#" className="header-main__link">
+                    <a href="#!" className="header-main__link">
                         Advance
                     </a>
                 </div>

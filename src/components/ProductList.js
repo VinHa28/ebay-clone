@@ -62,7 +62,7 @@ export default function ProductList() {
             <div className="product-list__items">
                 {filteredProducts.map((product) => (
                     <div key={product.productId} className="product-item">
-                        <Link to={`/detail/:${product.productId}`} className="product-item__image-link">
+                        <Link to={`/detail/${product.productId}`} className="product-item__image-link">
                             <img
                                 src={product.image}
                                 alt={product.name}
@@ -71,7 +71,7 @@ export default function ProductList() {
                         </Link>
                         <div className="product-item__info">
                             <h5 className="product-item__name">
-                                <Link to={`/detail/:${product.productId}`}>{product.name}</Link>
+                                <Link to={`/detail/${product.productId}`}>{product.name}</Link>
                             </h5>
                             <p className="product-item__brand">
                                 Brand: {brands.find((b) => b.brandId === product.brandId).name}

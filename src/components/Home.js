@@ -181,7 +181,7 @@ function Home() {
                     {products.map((product) => (
                         <div key={product.id} className="product-item-home">
                             <div className="product-image-container">
-                                <Link to={`/detail/:${product.id}`}>
+                                <Link to={`/detail/${product.id}`}>
                                     <img
                                         src={product.image}
                                         alt={product.name}

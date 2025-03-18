@@ -20,7 +20,7 @@
       { "brandId": 4, "name": "Nike", "image": "/images/brands/brand-04.png", "country": "USA", "founded": 1964 },
       { "brandId": 5, "name": "Adidas", "image": "/images/brands/brand-05.png", "country": "Germany", "founded": 1949 },
       { "brandId": 6, "name": "LG", "image": "/images/brands/brand-06.png", "country": "South Korea", "founded": 1958 },
-      { "brandId": 7, "name": "Hang Du lic (CER)", "image": "/images/brands/brand-07.png", "country": "Vietnam", "founded": 2024 }
+      { "brandId": 7, "name": "Hằng Du Lịch - Chị Em Rọt (CER)", "image": "/images/brands/brand-07.png", "country": "Vietnam", "founded": 2024 }
     ],
     "Product": [
       { "productId": 1, "categoryId": 1, "brandId": 1, "name": "iPhone 14 Pro", "price": 999, "image": "/images/products/product-01.png", "rating": 4.8, "inStock": true, "description": "Latest Apple iPhone with advanced features.", "discount": 0, "warranty": "1 year" },
