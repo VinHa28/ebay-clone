@@ -3,7 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import BaseURL from "../others/BaseURL";
 function Home() {
     
     const [categories, setCategories] = useState([]); 
@@ -11,15 +11,15 @@ function Home() {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/categories") 
+        axios.get(`${BaseURL}categories`) 
             .then(response => setCategories(response.data))
             .catch(error => console.error("Error fetching categories:", error));
 
-        axios.get("http://localhost:3000/products") 
+        axios.get(`${BaseURL}products`) 
             .then(response => setProducts(response.data))
             .catch(error => console.error("Error fetching products:", error));
 
-        axios.get("http://localhost:3000/brands")
+        axios.get(`${BaseURL}brands`)
         .then(response => setBrands(response.data))
         .catch(error => console.error("Error fetching brands:", error))
     }, []);

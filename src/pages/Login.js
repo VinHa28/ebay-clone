@@ -15,7 +15,7 @@ export default function Login() {
         e.preventDefault();
         const user = userList.find((user) => {
             return (
-                (user.username === username || user.email === username) &&
+                (user.userName.toLowerCase() === username.toLocaleLowerCase() || user.email.toLowerCase() === username.toLowerCase()) &&
                 user.password === password
             );
         });
@@ -46,9 +46,9 @@ export default function Login() {
                     </h2>
                     <p className="login-form__desc">
                         New to eBay?
-                        <a href="#!" className="login-form__link">
+                        <Link to="/register" className="login-form__link">
                             Create account
-                        </a>
+                        </Link>
                     </p>
                     <input
                         type="text"

@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./ProductCategoryList.css";
 import axios from "axios";
 import BaseURL from "../others/BaseURL";
-import { Link } from "react-router-dom";
 
-const ProductCategoryList = () => {
+const ProductCategoryList = ({ onCategorySelect }) => {
     const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState("");
+    
     useEffect(() => {
         axios
             .get(`${BaseURL}categories`)
@@ -14,17 +15,43 @@ const ProductCategoryList = () => {
                 console.log("Failed to fetch categories: ", error)
             );
     }, []);
-    console.log(categories);
+    
+    const handleCategoryClick = (categoryId) => {
+        setSelectedCategory(categoryId);
+        if (onCategorySelect) {
+            onCategorySelect(categoryId);
+        }
+    };
+    
     return (
         <div className="">
             <h4 className="fw-bold">Shop by category</h4>
             <ul className="category-list">
+                <li className="category-list__item">
+                    <a 
+                        href="#!" 
+                        className={`category-list__link ${selectedCategory === "" ? "active" : ""}`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleCategoryClick("");
+                        }}
+                    >
+                        All Categories
+                    </a>
+                </li>
                 {categories.map((category) => {
                     return (
-                        <li key={category.categoryId} className="category-list__item">
-                            <Link to="/product" className="category-list__link">
+                        <li key={category.id} className="category-list__item">
+                            <a 
+                                href="#!" 
+                                className={`category-list__link ${selectedCategory === category.id ? "active" : ""}`}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleCategoryClick(category.id);
+                                }}
+                            >
                                 {category.name}
-                            </Link>
+                            </a>
                         </li>
                     );
                 })}

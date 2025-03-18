@@ -17,7 +17,7 @@ const Header = () => {
                             Hi!{" "}
                             <Link to="/login" style={{ textDecoration: "underline" }}> Sign in </Link>{" "}
                             or{" "}
-                            <Link to="/login" style={{ textDecoration: "underline" }}> register. </Link>
+                            <Link to="/register" style={{ textDecoration: "underline" }}> register. </Link>
                         </li>
                         <li className="header-top__item">
                             <Link className="header-top__link" to="/">

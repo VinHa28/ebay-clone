@@ -44,6 +44,15 @@
       "address": "202 Cedar Lane",
       "email": "robert.chen@email.com",
       "phone": "555-567-8901"
+    },
+    {
+      "id": "dbfe",
+      "userName": "vinhhv28",
+      "password": "123456",
+      "fullName": "Hà Văn Vinh",
+      "address": "Hoa Lac, Thach That, Ha Noi",
+      "email": "vinhhv28@gmail.com",
+      "phone": "0981228204"
     }
   ],
   "categories": [
@@ -186,7 +195,7 @@
       "id": "5",
       "categoryId": 5,
       "brandId": 7,
-      "name": "Kẹo Kerra",
+      "name": "Kẹo Kera",
       "price": 36,
       "image": "/images/products/product-11.png",
       "rating": 3.6,
@@ -345,6 +354,17 @@
       "paymentMethod": "Credit Card",
       "shippingFee": 15,
       "totalAmount": 3788
+    },
+    {
+      "id": "f51d",
+      "userId": "1",
+      "orderDate": "2025-03-18",
+      "shipDate": "2025-03-21",
+      "status": "Processing",
+      "address": "123 Elm Street",
+      "paymentMethod": "Credit Card",
+      "shippingFee": 15,
+      "totalAmount": 36
     }
   ],
   "orderDetails": [
@@ -494,13 +514,6 @@
       "productId": 9,
       "quantity": 1,
       "dateAdded": "2025-03-18T13:45:00"
-    },
-    {
-      "id": "73ec",
-      "userId": "1",
-      "productId": 5,
-      "quantity": 1,
-      "dateAdded": "2025-03-18T16:45:27.911Z"
     }
   ],
   "reviews": [
