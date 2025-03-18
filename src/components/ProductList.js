@@ -58,6 +58,7 @@ const products = [
         rating: 4.8,
     },
 ];
+
 export default function ProductList() {
     const [search, setSearch] = useState("");
     const [brand, setBrand] = useState("");
