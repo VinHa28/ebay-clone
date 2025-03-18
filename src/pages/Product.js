@@ -15,10 +15,10 @@ const Product = () => {
         <Container className="custom-container">
             <h1 className="product__title fw-bold">Products List</h1>
             <Row>
-                <Col md={2}>
+                <Col md={3}>
                     <ProductCategoryList onCategorySelect={handleCategorySelect}></ProductCategoryList>
                 </Col>
-                <Col md={10}>
+                <Col md={9}>
                     <ProductList selectedCategory={selectedCategory}></ProductList>
                 </Col>
             </Row>

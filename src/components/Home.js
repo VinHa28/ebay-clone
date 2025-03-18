@@ -87,8 +87,8 @@ function Home() {
                     {brands.map((brand) => (
                         
                         <Link
-                        key={brand.brandId}
-                        to={`/product?brand=${brand.brandId}`}
+                        key={brand.id}
+                        to={`/product?brand=${brand.id}`}
                         className="category-item"
                         aria-label={`Browse ${brand.name} products`}
                     >
