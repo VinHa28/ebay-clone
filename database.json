@@ -53,6 +53,15 @@
       "address": "Hoa Lac, Thach That, Ha Noi",
       "email": "vinhhv28@gmail.com",
       "phone": "0981228204"
+    },
+    {
+      "id": "0422",
+      "userName": "vinh2",
+      "password": "123456",
+      "fullName": "Ha Van Vinh",
+      "address": "Hanoi Vietnam",
+      "email": "vinh@gmail.com",
+      "phone": "0981228204"
     }
   ],
   "categories": [
