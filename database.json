@@ -202,15 +202,15 @@
     },
     {
       "id": "5",
-      "categoryId": 1,
-      "brandId": 2,
-      "name": "Samsung Galaxy Buds 2",
-      "price": 149,
-      "image": "/images/products/product-05.png",
-      "rating": 4.5,
+      "categoryId": 5,
+      "brandId": 7,
+      "name": "Kẹo Kera",
+      "price": 36,
+      "image": "/images/products/product-11.png",
+      "rating": 3.6,
       "inStock": true,
-      "description": "Wireless earbuds with noise cancellation.",
-      "discount": 20,
+      "description": "One pill is equal to one plate of vegetables.",
+      "discount": 0,
       "warranty": "1 year"
     },
     {
@@ -280,15 +280,15 @@
     },
     {
       "id": "11",
-      "categoryId": 5,
-      "brandId": 7,
-      "name": "Kẹo Kerra",
-      "price": 36,
-      "image": "/images/products/product-11.png",
-      "rating": 3.6,
+      "categoryId": 1,
+      "brandId": 2,
+      "name": "Samsung Galaxy Buds 2",
+      "price": 149,
+      "image": "/images/products/product-05.png",
+      "rating": 4.5,
       "inStock": true,
-      "description": "One pill is equal to one plate of vegetables.",
-      "discount": 0,
+      "description": "Wireless earbuds with noise cancellation.",
+      "discount": 20,
       "warranty": "1 year"
     }
   ],
@@ -352,6 +352,39 @@
       "address": "123 Elm Street",
       "paymentMethod": "Credit Card",
       "shippingFee": 15
+    },
+    {
+      "id": "a6e3",
+      "userId": "1",
+      "orderDate": "2025-03-18",
+      "shipDate": "2025-03-21",
+      "status": "Processing",
+      "address": "123 Elm Street",
+      "paymentMethod": "Credit Card",
+      "shippingFee": 15,
+      "totalAmount": 3788
+    },
+    {
+      "id": "f51d",
+      "userId": "1",
+      "orderDate": "2025-03-18",
+      "shipDate": "2025-03-21",
+      "status": "Processing",
+      "address": "123 Elm Street",
+      "paymentMethod": "Credit Card",
+      "shippingFee": 15,
+      "totalAmount": 36
+    },
+    {
+      "id": "8963",
+      "userId": "1",
+      "orderDate": "2025-03-18",
+      "shipDate": "2025-03-21",
+      "status": "Processing",
+      "address": "123 Elm Street",
+      "paymentMethod": "Credit Card",
+      "shippingFee": 15,
+      "totalAmount": 1399
     }
   ],
   "orderDetails": [
@@ -363,7 +396,7 @@
       "subTotal": 999,
       "discount": 0,
       "tax": 99.9,
-      "id": "a9c8"
+      "id": "f0e5"
     },
     {
       "orderId": 2,
@@ -373,7 +406,7 @@
       "subTotal": 1199,
       "discount": 50,
       "tax": 114.9,
-      "id": "da50"
+      "id": "6236"
     },
     {
       "orderId": 3,
@@ -383,7 +416,7 @@
       "subTotal": 298,
       "discount": 40,
       "tax": 25.8,
-      "id": "eee8"
+      "id": "da13"
     },
     {
       "orderId": 3,
@@ -393,7 +426,7 @@
       "subTotal": 129,
       "discount": 0,
       "tax": 12.9,
-      "id": "7b38"
+      "id": "90d5"
     },
     {
       "orderId": 4,
@@ -403,7 +436,7 @@
       "subTotal": 799,
       "discount": 0,
       "tax": 79.9,
-      "id": "3688"
+      "id": "86ce"
     },
     {
       "orderId": 5,
@@ -413,7 +446,7 @@
       "subTotal": 360,
       "discount": 30,
       "tax": 33,
-      "id": "88ce"
+      "id": "68cc"
     },
     {
       "orderId": 5,
@@ -423,7 +456,7 @@
       "subTotal": 399,
       "discount": 50,
       "tax": 34.9,
-      "id": "7cd0"
+      "id": "cc98"
     },
     {
       "orderId": 6,
@@ -433,17 +466,50 @@
       "subTotal": 2199,
       "discount": 200,
       "tax": 199.9,
-      "id": "393e"
+      "id": "07b1"
+    },
+    {
+      "id": "0036",
+      "orderId": "a6e3",
+      "productId": 2,
+      "unitPrice": 1199,
+      "quantity": 1,
+      "subTotal": 1149,
+      "discount": 50,
+      "tax": 114.9
+    },
+    {
+      "id": "d359",
+      "orderId": "a6e3",
+      "productId": 4,
+      "unitPrice": 499,
+      "quantity": 5,
+      "subTotal": 2495,
+      "discount": 0,
+      "tax": 249.5
+    },
+    {
+      "id": "0aec",
+      "orderId": "a6e3",
+      "productId": 5,
+      "unitPrice": 36,
+      "quantity": 4,
+      "subTotal": 144,
+      "discount": 0,
+      "tax": 14.4
+    },
+    {
+      "id": "8b65",
+      "orderId": "8963",
+      "productId": 3,
+      "unitPrice": 1499,
+      "quantity": 1,
+      "subTotal": 1399,
+      "discount": 100,
+      "tax": 139.9
     }
   ],
   "carts": [
-    {
-      "id": "1",
-      "userId": 1,
-      "productId": 2,
-      "quantity": 1,
-      "dateAdded": "2025-03-18T08:30:00"
-    },
     {
       "id": "2",
       "userId": 2,
@@ -457,13 +523,6 @@
       "productId": 3,
       "quantity": 1,
       "dateAdded": "2025-03-18T10:15:00"
-    },
-    {
-      "id": "4",
-      "userId": 1,
-      "productId": 4,
-      "quantity": 5,
-      "dateAdded": "2025-03-16T16:20:00"
     },
     {
       "id": "5",

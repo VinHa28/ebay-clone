@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductList.css";
 import axios from "axios";
 import BaseURL from "../others/BaseURL";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const EXCHANGE_RATE = 25525;
 export default function ProductList({ selectedCategory }) {
@@ -11,6 +11,9 @@ export default function ProductList({ selectedCategory }) {
     const [searchedBrands, setSearchedBrands] = useState("");
     const [sortType, setSortType] = useState("price");
     const [searchedName, setSearchedName] = useState("");
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const brandFromURL = queryParams.get('brand') || "";
 
     useEffect(() => {
         axios
@@ -27,6 +30,10 @@ export default function ProductList({ selectedCategory }) {
         const fitCategory = selectedCategory ? product.categoryId.toString() === selectedCategory.toString() : true;
         return fitSearchName && fitBrand && fitCategory;
     });
+
+    useEffect(() => {
+        setSearchedBrands(brandFromURL);
+    }, [brandFromURL]);
 
     // Sort products based on sort type
     const sortedProducts = [...filteredProducts].sort((a, b) => {

@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Product from "./pages/Product";
 import Detail from "./pages/Detail";
 import Login from "./pages/Login";
+import Cart from "./pages/Cart";
 import Register from "./pages/Register";
 
 function Layout() {
@@ -22,6 +23,7 @@ function Layout() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
